@@ -109,12 +109,6 @@ body{
     text-align: left;
 }
 
-<<<<<<< HEAD
-*{
-    box-sizing: border-box;
-}
-=======
-
 .the_1 button{
     background-color:papayawhip;
     padding: 5px;
@@ -186,4 +180,3 @@ body{
     background-color: green;
     color: black;
 }
->>>>>>> f943b68 (update html and css)
