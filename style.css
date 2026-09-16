@@ -103,3 +103,7 @@ body{
 .danh_sach li{
     text-align: left;
 }
+
+*{
+    box-sizing: border-box;
+}
