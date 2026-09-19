@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: peru;
+}
+.first{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 0;
+    background-color: antiquewhite;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-direction: column;
+    transition: transform 0.25s;
+}
+.second_link a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px;
+    background-color: palevioletred;
+    border-radius: 20px;
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.19);
+    transition: transform 0.25s;
+    width: 100%;
+    width: 250px;
+    text-align: center;
+}
+.second_link a:hover{
+    transform: scale(0.95)
+    translateX(2px)
+    translateY(-2px);
+    color: wheat;
+    background: black;
+}
+.second_link {
+    width: 100%;
+    width: 1500px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+}
+.first h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: navy;
+}
+
+.third_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap:20px;
+    flex-direction: column;
+    background-color: peachpuff;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.third_main p{
+    text-align: center;
+}
+.third_main img{
+    border-radius: 100%;
+    border: solid black 3px;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.25s;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.50);
+}
+.third_main img:hover{
+    transform: scale(0.95);
+}
+.third_main  p{
+    color: navy;
+}
+.four_section{
+    background-color: aliceblue;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 30px;
+    transition: all 0.25s;
+    border: solid 2px peru;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.50);
+}
+.four_section  h2{
+    color: green;
+}
+
+.four_section:hover{
+    transform: scale(0.95);
+}
+  @view-transition {
+      navigation: auto;
+  }
+  ::view-transition-old(root) {
+      animation: fade-out 0.50s ease-in forwards;
+  }
+  ::view-transition-new(root) {
+      animation: fade-in 0.50s ease-out forwards;
+  }
+
+  @keyframes fade-out {
+      from {
+          opacity: 1;
+          transform: translateY(0);
+      }
+
+      to {
+          opacity: 0;
+          transform: translateY(-10px);
+      }
+  }
+
+  @keyframes fade-in {
+      from {
+          opacity: 0;
+          transform: translateY(10px);
+      }
+
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
