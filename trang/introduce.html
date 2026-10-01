@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/giao_dien/style_2.css">
+    <script src="/logic/logic.js" defer></script>
     <title>Giới thiệu | Hoàng Minh Ân</title>
 </head>
 <body>
     <header class="first">
-        <h1>👿Hoàng Minh Ân · Software · HCMUS👿</h1>
+        <h1>👿Hoàng Minh Ân - Software - HCMUS👿</h1>
         <nav class="second_link" aria-label="Điều hướng chính">
-        <a href="/trang/index.html">🏠Trang chủ🏠</a>
-        <a href="/trang/introduce.html" aria-current="page">👤Giới thiệu👤</a>
-        <a href="/trang/contact.html">📪Liên hệ📪</a>
+            <a href="/trang/index.html">🏠Trang chủ🏠</a>
+            <a class="active" href="/trang/introduce.html" aria-current="page">👤Giới thiệu👤</a>
+            <a href="/trang/contact.html">📪Liên hệ📪</a>
         </nav>
+        <button class="doi_che_do" type="button">🌙 Chế độ tối</button>
     </header>
     <main class="third_main">
-        <img src="/hinhanh/độ i i.webp" width="200px" height="200px" alt="Ảnh đại diện của Hoàng Minh Ân">
+        <img class="profile_image" src="/hinhanh/độ i i.webp" width="200" height="200" alt="Ảnh đại diện của Hoàng Minh Ân">
         <p>Hoàng Minh Ân, sinh năm 2005, hiện là sinh viên Trường Đại học Khoa học Tự nhiên.
             Có kinh nghiệm với 5 ngôn ngữ lập trình, 2 framework và 10 dự án web, Web IoT.
             Hiện đang giảng dạy Python, thiết kế Figma, game 2D, C++, web cơ bản, Docker và CI/CD.
         </p>
+        <section class="image_gallery">
+            <h2> what the phắc =))) </h2>
+            <div class="gallery_grid">
+                <img src="/hinhanh/anh-meme-hai-1.jpg" alt="Chú chó đội mũ trang trí" loading="lazy">
+                <img src="/hinhanh/meme_2.jpg" alt="Ảnh meme chú chó Lâm Y Trúa" loading="lazy">
+                <img src="/hinhanh/meme_3.jpg" alt="Nhân vật nét vẽ đeo kính đen" loading="lazy">
+            </div>
+        </section>
         <section class="four_section">
             <h2>☑️ Sản phẩm và giải pháp công nghệ ☑️</h2>
             <article>
@@ -38,5 +48,13 @@
             </article>
         </section>
     </main>
+    <div id="xem_anh" class="xem_anh">
+        <button id="dong_xem_anh" type="button">X</button>
+        <img id="anh_phong_to" src="/hinhanh/anh-meme-hai-1.jpg" alt="Ảnh phóng to">
+    </div>
+    <button class="len_dau_trang" type="button">⬆</button>
+    <footer class="chan">
+        scammer by Ân =)) 
+    </footer>
 </body>
 </html>

@@ -1,28 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/giao_dien/style.css">
-    <script src="/logic.js"></script>
-    <title>CV PROFILE</title>
+    <script src="/logic/logic.js" defer></script>
+    <title>Trang chủ | Hoàng Minh Ân</title>
 </head>
 <body>
-    <header class="heading">
-    <strong>SHOP HOÀNG MINH ÂN</strong>
-    <nav class="menu">
-        <a href="/trang/index.html">home</a>
-        <a href="/trang/introduce.html">intro</a>
-        <a href="/trang/contact.html">phone</a>
-    </nav>
+    <header class="first">
+        <h1>👿Hoàng Minh Ân - Software - HCMUS👿</h1>
+        <nav class="second_link" aria-label="Điều hướng chính">
+            <a class="active" href="/trang/index.html" aria-current="page">🏠Trang chủ🏠</a>
+            <a href="/trang/introduce.html">👤Giới thiệu👤</a>
+            <a href="/trang/contact.html">📪Liên hệ📪</a>
+        </nav>
+        <button class="doi_che_do" type="button">🌙 Chế độ tối</button>
     </header>
     <main class="text_main">
         <h1>HOÀNG MINH ÂN STORE</h1>
+        <section class="bo_loc_san_pham">
+            <h2>Tìm kiếm sản phẩm</h2>
+            <input id="tim_san_pham" type="search" placeholder="Nhập tên gói cần tìm">
+            <select id="loc_gia">
+                <option value="tat_ca">Tất cả mức giá</option>
+                <option value="duoi_100">Dưới 100.000đ</option>
+                <option value="tu_100">Từ 100.000đ</option>
+            </select>
+            <select id="loc_dung_luong">
+                <option value="tat_ca">Tất cả dung lượng</option>
+                <option value="5">5GB</option>
+                <option value="10">10GB</option>
+                <option value="20">20GB</option>
+            </select>
+            <select id="loc_token">
+                <option value="tat_ca">Tất cả số token</option>
+                <option value="10000">10.000 token</option>
+                <option value="50000">50.000 token</option>
+                <option value="80000">80.000 token</option>
+            </select>
+            <select id="loc_uu_dai">
+                <option value="tat_ca">Tất cả ưu đãi</option>
+                <option value="co">Có ưu đãi</option>
+                <option value="khong">Không có ưu đãi</option>
+            </select>
+        </section>
         <section class="danh_sach">
             <h2>dịch vụ trao đổi mua bán acc discord</h2>
             <strong>trade and bought bot chat discord</strong>
-            <article class="the_1">
+            <article class="the_1" data-ten="gói cơ bản" data-gia="55000" data-dung-luong="5" data-token="10000" data-uu-dai="khong">
                 <h3>gói cơ bản</h3>
+                <img class="goi_image" src="/hinhanh/goi-co-ban.png" alt="Robot minh họa cho gói cơ bản" loading="lazy">
                 <p>55.000đ</p>
                 <ul>
                     <li> 1 tài khoản bot chat </li>
@@ -31,8 +59,9 @@
                 </ul>
                 <button onclick="mua_1()">mua</button>
             </article>
-            <article class="the_2">
+            <article class="the_2" data-ten="gói ưu đãi cơ bản" data-gia="100000" data-dung-luong="10" data-token="50000" data-uu-dai="co">
                 <h3>gói ưu đãi cơ bản</h3>
+                <img class="goi_image" src="/hinhanh/goi-uu-dai.png" alt="Robot minh họa cho gói ưu đãi cơ bản" loading="lazy">
                 <p>100.000đ</p>
                 <ul>
                     <li> 1 tài khoản bot chat </li>
@@ -42,8 +71,9 @@
                 </ul>
                 <button onclick="mua_2()">mua</button>
             </article>
-            <article class="the_3">
+            <article class="the_3" data-ten="gói trung bình" data-gia="200000" data-dung-luong="20" data-token="80000" data-uu-dai="co">
                 <h3>gói trung bình</h3>
+                <img class="goi_image" src="/hinhanh/goi-trung-binh.png" alt="Robot minh họa cho gói trung bình" loading="lazy">
                 <p>200.000đ</p>
                 <ul>
                     <li> 1 tài khoản bot chat </li>
@@ -54,10 +84,107 @@
                 </ul>
                 <button onclick="mua_3()">mua</button>
             </article>
+            <p id="khong_co_san_pham" class="khong_co_san_pham">Không tìm thấy sản phẩm phù hợp.</p>
+        </section>
+        <section class="so_sanh_goi">
+            <h2>So sánh các gói</h2>
+            <div class="bang_so_sanh">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Thông tin</th>
+                            <th>Cơ bản</th>
+                            <th>Ưu đãi</th>
+                            <th>Trung bình</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Giá</td><td>55.000đ</td><td>100.000đ</td><td>200.000đ</td></tr>
+                        <tr><td>Dung lượng</td><td>5GB</td><td>10GB</td><td>20GB</td></tr>
+                        <tr><td>Token</td><td>10.000</td><td>50.000</td><td>80.000</td></tr>
+                        <tr><td>Giảm lần hai</td><td>Không</td><td>25%</td><td>25%</td></tr>
+                        <tr><td>Cập nhật mới</td><td>Không</td><td>Không</td><td>Có</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="danh_gia_section">
+            <h2>Đánh giá của khách hàng</h2>
+            <form id="form_danh_gia" class="form_danh_gia">
+                <input id="ten_danh_gia" type="text" placeholder="Tên của bạn" required>
+                <select id="so_sao" required>
+                    <option value="5">5 sao</option>
+                    <option value="4">4 sao</option>
+                    <option value="3">3 sao</option>
+                    <option value="2">2 sao</option>
+                    <option value="1">1 sao</option>
+                </select>
+                <textarea id="noi_dung_danh_gia" rows="4" placeholder="Nội dung đánh giá" required></textarea>
+                <button type="submit">Gửi đánh giá</button>
+            </form>
+            <div id="danh_sach_danh_gia" class="danh_sach_danh_gia"></div>
         </section>
     </main>
+    <div id="xem_anh" class="xem_anh">
+        <button id="dong_xem_anh" type="button">X</button>
+        <img id="anh_phong_to" src="/hinhanh/goi-co-ban.png" alt="Ảnh sản phẩm phóng to">
+    </div>
+    <button id="mo_chat" class="mo_chat" type="button">🤖 Chatbot</button>
+    <section id="hop_chat" class="hop_chat" aria-label="Chatbot mua hàng">
+        <div id="chat_header" class="chat_header" title="Giữ và kéo để di chuyển">
+            <strong>Chatbot mua hàng</strong>
+            <div class="chat_control">
+                <button id="thu_nho_chat" type="button" title="Thu nhỏ">−</button>
+                <button id="phong_to_chat" type="button" title="Phóng to">+</button>
+                <button id="dong_chat" type="button" title="Đóng">X</button>
+            </div>
+        </div>
+        <div id="khung_tin_nhan" class="khung_tin_nhan">
+            <p class="tin_bot">Xin chào, bạn hãy chọn câu hỏi hoặc chọn gói muốn mua.</p>
+        </div>
+        <strong>Chọn câu hỏi:</strong>
+        <div class="lua_chon_chat">
+            <button type="button" onclick="traLoiChat('chon_goi')">Nên chọn gói nào?</button>
+            <button type="button" onclick="traLoiChat('gia_goi')">Giá các gói?</button>
+            <button type="button" onclick="traLoiChat('dung_luong')">Gói nào nhiều dung lượng?</button>
+            <button type="button" onclick="traLoiChat('cach_mua')">Cách mua hàng?</button>
+            <button type="button" onclick="traLoiChat('lien_he')">Liên hệ tư vấn?</button>
+            <button type="button" onclick="traLoiChat('van_de_khac')">ngoài sản phẩm bot</button>
+        </div>
+        <div id="lua_chon_phu" class="lua_chon_chat lua_chon_phu">
+            <button type="button" onclick="traLoiChat('moi_su_dung')">Tôi mới sử dụng</button>
+            <button type="button" onclick="traLoiChat('nhieu_dung_luong')">Tôi cần nhiều dung lượng</button>
+            <button type="button" onclick="traLoiChat('nhieu_token')">Tôi cần nhiều token</button>
+            <button type="button" onclick="traLoiChat('tiet_kiem')">Tôi muốn tiết kiệm</button>
+        </div>
+        <ul id="danh_sach_mua">
+            <li>Bạn chưa chọn sản phẩm</li>
+        </ul>
+        <div class="thanh_toan_chat">
+            <p>Tạm tính: <strong id="tam_tinh">0đ</strong></p>
+            <p>Giảm giá: <strong id="giam_gia">0đ</strong></p>
+            <p class="tong_tien">Tổng tiền: <strong id="tong_tien">0đ</strong></p>
+        </div>
+        <form id="form_dat_hang" class="form_dat_hang">
+            <strong>Thông tin đặt hàng</strong>
+            <input id="ten_dat_hang" type="text" placeholder="Họ và tên" required>
+            <input id="so_dien_thoai" type="tel" placeholder="Số điện thoại" required>
+            <input id="email_dat_hang" type="email" placeholder="Email" required>
+            <select id="thanh_toan" required>
+                <option value="" selected disabled>Chọn cách thanh toán</option>
+                <option value="Chuyển khoản">Chuyển khoản</option>
+                <option value="Thanh toán khi nhận hàng">Thanh toán khi nhận hàng</option>
+            </select>
+            <button type="submit">Xác nhận đơn</button>
+        </form>
+        <div class="chat_button">
+            <button id="dong_y_mua" class="dong_y_mua" type="button">OK mua</button>
+            <button id="huy_mua" class="huy_mua" type="button">Huỷ</button>
+        </div>
+    </section>
+    <button class="len_dau_trang" type="button">⬆</button>
     <footer class="chan">
-        @create by HOANG MINH AN 2026
+        scammer by Ân =)))
     </footer>
 </body>
 </html>

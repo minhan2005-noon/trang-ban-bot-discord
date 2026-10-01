@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Liên hệ với Hoàng Minh Ân để trao đổi về dự án và giải pháp công nghệ.">
+    <link rel="stylesheet" href="/giao_dien/style_contact.css">
+    <script src="/logic/logic.js" defer></script>
+    <title>Liên hệ | Hoàng Minh Ân</title>
+</head>
+<body>
+    <header class="first">
+        <h1>👿Hoàng Minh Ân - Software - HCMUS👿</h1>
+        <nav class="second_link" aria-label="Điều hướng chính">
+            <a href="/trang/index.html">🏠Trang chủ🏠</a>
+            <a href="/trang/introduce.html">👤Giới thiệu👤</a>
+            <a class="active" href="/trang/contact.html" aria-current="page">📪Liên hệ📪</a>
+        </nav>
+        <button class="doi_che_do" type="button">🌙 Chế độ tối</button>
+    </header>
+
+    <main class="contact_main">
+        <section class="contact_intro">
+            <p class="small_title">📬 KẾT NỐI VỚI MÌNH 📬</p>
+            <h2>Liên hệ và hợp tác</h2>
+            <p>
+                Bạn đang quan tâm đến website, bot chat, khóa học hoặc các giải pháp
+                công nghệ? Hãy để lại lời nhắn, mình sẽ phản hồi sớm nhất có thể.
+            </p>
+        </section>
+
+        <section class="contact_content">
+            <div class="contact_information">
+                <h2>☎️ Thông tin liên hệ</h2>
+
+                <article class="information_card">
+                    <span aria-hidden="true">📍</span>
+                    <div>
+                        <h3>Khu vực</h3>
+                        <p>TP. Hồ Chí Minh</p>
+                    </div>
+                </article>
+
+                <article class="information_card">
+                    <span aria-hidden="true">⏰</span>
+                    <div>
+                        <h3>Thời gian làm việc</h3>
+                        <p>Thứ 2 - Thứ 7</p>
+                    </div>
+                </article>
+
+                <article class="information_card">
+                    <span aria-hidden="true">💬</span>
+                    <div>
+                        <h3>Thời gian phản hồi</h3>
+                        <p>Trong vòng 24 giờ</p>
+                    </div>
+                </article>
+
+                <article class="information_card">
+                    <span aria-hidden="true">🕐</span>
+                    <div>
+                        <h3>Thời gian hiện tại</h3>
+                        <p id="thoi_gian_hien_tai">Đang cập nhật...</p>
+                        <p id="trang_thai_lam_viec">Đang kiểm tra trạng thái...</p>
+                    </div>
+                </article>
+
+                <p class="contact_note">⭐ Đang sẵn sàng nhận dự án mới</p>
+            </div>
+
+            <div class="contact_form_box">
+                <h2>✉️ Gửi lời nhắn</h2>
+                <form action="/trang/contact.html" method="get">
+                    <div class="form_group">
+                        <label for="name">Họ và tên</label>
+                        <input id="name" name="name" type="text" placeholder="Nhập họ và tên" autocomplete="name" required>
+                    </div>
+
+                    <div class="form_group">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="Nhập địa chỉ email" autocomplete="email" required>
+                    </div>
+
+                    <div class="form_group">
+                        <label for="topic">Chủ đề</label>
+                        <select id="topic" name="topic" required>
+                            <option value="" selected disabled>Chọn nội dung cần trao đổi</option>
+                            <option value="website">Thiết kế website</option>
+                            <option value="bot">Bot chat và tự động hóa</option>
+                            <option value="course">Khóa học công nghệ</option>
+                            <option value="other">Nội dung khác</option>
+                        </select>
+                    </div>
+
+                    <div class="form_group">
+                        <label for="message">Nội dung</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Nhập nội dung bạn muốn trao đổi..." required></textarea>
+                    </div>
+
+                    <button type="submit">Gửi liên hệ 🚀</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <button class="len_dau_trang" type="button">⬆</button>
+    <footer class="chan">
+        scammer by Ân =)))
+    </footer>
+</body>
+</html>
